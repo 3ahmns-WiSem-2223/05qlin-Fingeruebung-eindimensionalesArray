@@ -16,7 +16,17 @@ public class ArrayUebung : MonoBehaviour
     {
         array4[0] = "array4";
         GameObject[] arrayColoredImagesRed = GameObject.FindGameObjectsWithTag("RedImage");
+
+        Debug.Log(array1[0]);
+        Debug.Log(array1[3]);
+        Debug.Log(array2[0]);
+        Debug.Log(array2[3]);
+        Debug.Log(array3[0]);
+        Debug.Log(array3[6]);
+        Debug.Log(array4[0]);
+        Debug.Log(array4[9]);
         Debug.Log(arrayColoredImagesRed[0].name);
+        Debug.Log(arrayColoredImagesRed[3].name);
     }
 
 
