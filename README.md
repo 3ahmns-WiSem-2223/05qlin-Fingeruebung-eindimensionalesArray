@@ -1,0 +1,1 @@
+# 05qlin-fingeruebung-eindimensionalesArray
