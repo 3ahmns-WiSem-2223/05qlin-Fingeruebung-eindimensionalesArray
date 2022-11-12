@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class ArrayUebung : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int[] array;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
