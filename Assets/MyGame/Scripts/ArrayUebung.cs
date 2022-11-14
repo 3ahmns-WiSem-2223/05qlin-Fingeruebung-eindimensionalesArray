@@ -27,8 +27,31 @@ public class ArrayUebung : MonoBehaviour
         Debug.Log(array4[9]);
         Debug.Log(arrayColoredImagesRed[0].name);
         Debug.Log(arrayColoredImagesRed[3].name);
+
+        ArrayWerte();
+        ArrayString();
     }
 
+    private void ArrayWerte()
+    {
+        int[] werte = new int[5] { 1, 2, 3, 4, 5 };
+
+        for (int i = 0; i < werte.Length; i++)
+        {
+            Debug.Log(werte[i]++ + "= Element" + " " + i);
+        }
+    }
+
+    private void ArrayString()
+    {
+        int[] langerString = new int[5] { 1, 2, 3, 4, 5};
+
+        string a = " ";
+        for (int index = 0; index < langerString.Length; index++)
+        {
+            a += langerString[index] + " ";
+        }Debug.Log(a);
+    }
 
 
 }
