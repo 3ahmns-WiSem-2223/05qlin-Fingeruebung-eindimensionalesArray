@@ -5,4 +5,5 @@ Ein eindimensionales Array ist eine Datestruktur der mehrere Werte gleichen Typs
 
 Array Skizze:
 
-![Array_Skizze](https://user-images.githubusercontent.com/114598453/201482540-10cb1fbd-2c1f-4483-94ac-f09b8e97d949.png)
+![array](https://user-images.githubusercontent.com/114598453/202019051-4c0cf8c6-fa12-4148-98be-58c267bec9d6.png)
+
