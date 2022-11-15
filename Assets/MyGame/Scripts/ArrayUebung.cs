@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,8 +9,7 @@ public class ArrayUebung : MonoBehaviour
     int[] array2 = new int[4] { 21, 22, 23, 24 };
     int[] array3 = new int[7] { 31, 32, 33, 34, 35, 36, 37 };
     string[] array4 = new string[10];
-
-
+ 
     private void Start()
     {
         array4[0] = "array4";
@@ -64,6 +61,5 @@ public class ArrayUebung : MonoBehaviour
             a += langerString[index] + " ";
         }Debug.Log(a);
     }
-
 
 }
