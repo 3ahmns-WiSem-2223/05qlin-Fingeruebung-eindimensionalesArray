@@ -41,6 +41,7 @@ public class ArrayUebung : MonoBehaviour
         arrayColoredImagesRed[2].GetComponent<Image>().color = Color.green;
     }
 
+
     private void ArrayWerte()
     {
         int[] werte = new int[5] { 1, 2, 3, 4, 5 };

@@ -161,28 +161,23 @@ public class ArrayBeispiele : MonoBehaviour
 
     private void StringValues()
     {
+        string lastString = "b";
         for (int i = 0; i < array8.Length; i++)
         {
-            if (array8[i] == "b" || i == 0)
+            if (lastString == "b" || i == 0)
             {
                 array8[i] = "a";
+                lastString = array8[i];
                 Debug.Log(array8[i]);
             }
 
-            if (i != 0)
+            if(array8[i] != "a")  
+            if (lastString == "a")
             {
-                if (array8[i - 1] == "a")
-                {
-                    array8[i] = "b";
-                    Debug.Log(array8[i]);
-                }
-                if(array8[i-1] == "b")
-                {
-                    array8[i] = "a";
-                    Debug.Log(array8[i]);
-                }
+                array8[i] = "b";
+                lastString = array8[i];
+                Debug.Log(array8[i]);
             }
-
         }
     }
 
