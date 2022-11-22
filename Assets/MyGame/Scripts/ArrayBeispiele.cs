@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -32,10 +33,7 @@ public class ArrayBeispiele : MonoBehaviour
 
     private void MergeArray()
     {
-        int[] array10 = new int[array5.Length + array6.Length];
-        Array.Copy(array5, array10, array6.Length);
-        Array.Copy(array6, 0, array10, array5.Length, array6.Length);
-        Debug.Log(array10[0]);
+        int[] array10 = array5.Concat(array6).ToArray();
     }
 
     private void RandomNumbers()
@@ -73,9 +71,6 @@ public class ArrayBeispiele : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("MaxValue: " + max);
-        Debug.Log("MinValue: " + min);
     }
 
     private void RandomValue(int a)
@@ -86,6 +81,57 @@ public class ArrayBeispiele : MonoBehaviour
         }
 
         Debug.Log("index: "+ Array.IndexOf(array12, a));
+    }
+
+
+    private void EvenNumbers()
+    {
+        int f = 0;
+        for (int i = 0; i <= 500; i = i + 2)
+        {
+            array6[f] = i;
+            f++;
+        }
+    }
+
+    private void OddNumbers()
+    {
+        int e = 0;
+        for (int i = 1; i <= 500; i = i + 2)
+        {
+            array7[e] = i;
+            e += 1;
+        }
+    }
+
+    private void GeradeZahlen()
+    {
+        int d = 0;
+        for (int i = 20; i <= 70; i = i + 2)
+        {
+            array5[d] = i;
+            d++;
+        }
+    }
+
+    private void StringValues()
+    {
+        string lastString = "b";
+        for (int i = 0; i < array8.Length; i++)
+        {
+            if (lastString == "b" || i == 0)
+            {
+                array8[i] = "a";
+                lastString = array8[i];
+            }
+
+            if(array8[i] != "a")  
+            if (lastString == "a")
+            {
+                array8[i] = "b";
+                lastString = array8[i];
+            }
+        }
     }
 
     private void Histogramm()
@@ -116,67 +162,6 @@ public class ArrayBeispiele : MonoBehaviour
             if (number == 1)
             {
                 histogramm[4]++;
-            }
-        }
-
-        Debug.Log("Zahl 5: " + histogramm[0]);
-        Debug.Log("Zahl 4: " + histogramm[1]);
-        Debug.Log("Zahl 3: " + histogramm[2]);
-        Debug.Log("Zahl 2: " + histogramm[3]);
-        Debug.Log("Zahl 1: " + histogramm[4]);
-    }
-
-    private void EvenNumbers()
-    {
-        int f = 0;
-        for (int i = 0; i <= 500; i = i + 2)
-        {
-            array6[f] = i;
-            Debug.Log(array6[f]);
-            f++;
-        }
-    }
-
-    private void OddNumbers()
-    {
-        int e = 0;
-        for (int i = 1; i <= 500; i = i + 2)
-        {
-            array7[e] = i;
-            Debug.Log(array7[e]);
-            e += 1;
-        }
-    }
-
-    private void GeradeZahlen()
-    {
-        int d = 0;
-        for (int i = 20; i <= 70; i = i + 2)
-        {
-            array5[d] = i;
-            Debug.Log(array5[d]);
-            d++;
-        }
-    }
-
-    private void StringValues()
-    {
-        string lastString = "b";
-        for (int i = 0; i < array8.Length; i++)
-        {
-            if (lastString == "b" || i == 0)
-            {
-                array8[i] = "a";
-                lastString = array8[i];
-                Debug.Log(array8[i]);
-            }
-
-            if(array8[i] != "a")  
-            if (lastString == "a")
-            {
-                array8[i] = "b";
-                lastString = array8[i];
-                Debug.Log(array8[i]);
             }
         }
     }
